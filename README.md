@@ -10,13 +10,13 @@ Regularmente, utilizo IA generativa para me auxiliar a pensar na lógica e imple
 
 Prompt:
 
-_Crie uma função em Python que receba uma string do seguinte padrão: ck*12345678_89. A função deve cortar a string usando como corte o caractere '*' e armazenar os valores em um dicionário com chaves 'type', 'user_code' e 'digits', respectivamente a posição dos valores cortados._
+_Crie uma função em Python que receba uma string do seguinte padrão: ck-12345678-89. A função deve cortar a string usando como corte o caractere '-' e armazenar os valores em um dicionário com chaves 'type', 'userCode' e 'digits', respectivamente a posição dos valores cortados._
 
 Resultado:
 
 ```python
 def parse_string(input_string):
-    parts = input_string.split('_')
+    parts = input_string.split('-')
 
     if len(parts) != 3:
         return None
@@ -29,7 +29,7 @@ def parse_string(input_string):
 
     return result
 
-input_string = "ck_12345678_89"
+input_string = "ck-12345678-89"
 parsed_data = parse_string(input_string)
 
 if parsed_data:
